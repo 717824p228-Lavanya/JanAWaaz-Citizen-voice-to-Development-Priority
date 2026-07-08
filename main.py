@@ -16,6 +16,7 @@ from pydantic import BaseModel
 import sqlite3
 import re
 from datetime import datetime
+import os
 
 app = FastAPI(title="JanAwaaz API")
 
@@ -26,11 +27,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-DB = "janawaaz.db"
-
+DB = "/tmp/janawaaz.db"
 
 def get_db():
+    os.makedirs("/tmp", exist_ok=True)
     conn = sqlite3.connect(DB)
     conn.row_factory = sqlite3.Row
     return conn
