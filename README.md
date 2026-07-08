@@ -69,7 +69,7 @@ MethodEndpointDescriptionPOST/classifyClassify text (category, language, urgency
 
 Team TECH STRIKERS
 
-Add team member names here. NITHYASRI G
+Add team member names here. NITHYASRI G, LAVANYA B
 
 Hackathon 
  
